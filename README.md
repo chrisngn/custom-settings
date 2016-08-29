@@ -6,6 +6,12 @@ defaults write -g NSWindowResizeTime -float 0.003;killall Dock
 ## Undo the change above
 defaults delete -g NSWindowResizeTime
 
+## Showing a toolbar or menu bar in full screen
+defaults write -g NSToolbarFullScreenAnimationDuration -float 0;killall Dock
+
+## Undo the change above
+defaults delete -g NSToolbarFullScreenAnimationDuration
+
 ## Make a symbolic link to use "subl" command via Terminal
 sudo ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
 
