@@ -1,0 +1,17 @@
+/* move close button to right */
+/* !important = always show */
+.tab .close { 
+	display: inline;	
+	order:1 !important;	
+}
+
+/* move audio button to left */
+.tab .tab-audio{ 
+	order:-1 !important;
+}
+
+/* always show favicon, on Mac it disappears when you mouseover */
+.tab .favicon{ 
+	display: inline !important;
+	margin-left: 6px !important;
+}
