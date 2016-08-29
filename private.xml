@@ -3,8 +3,8 @@
 
   <!-- Apps -->
   <appdef>
-    <appname>SUBLIME2</appname>
-    <equal>com.sublimetext.2</equal>
+    <appname>SUBLIME_TEXT_3</appname>
+    <equal>com.sublimetext.3</equal>
   </appdef>
 
 
@@ -19,6 +19,11 @@
     <regex>^World of Warcraft$</regex>
   </windownamedef>
 
+  <windownamedef>
+    <name>YouTube</name>
+    <regex>YouTube</regex>
+  </windownamedef>
+
 
   <!-- Devices -->
   <devicevendordef>
@@ -31,11 +36,11 @@
   </deviceproductdef>
 
   <devicevendordef>
-    <vendorname>XCELLON</vendorname>
+    <vendorname>Xcellon</vendorname>
     <vendorid>0x12c9</vendorid> 
   </devicevendordef>
   <deviceproductdef>
-    <productname>XCELLON</productname>
+    <productname>Xcellon</productname>
     <productid>0x1001</productid>
   </deviceproductdef>
 
@@ -48,473 +53,1113 @@
     <productid>0x0273</productid>
   </deviceproductdef>
 
+  <devicevendordef>
+    <vendorname>Corsair_K70</vendorname>
+    <vendorid>0x1b1c</vendorid> 
+  </devicevendordef>
+  <deviceproductdef>
+    <productname>Corsair_K70</productname>
+    <productid>0x1b07</productid>
+  </deviceproductdef>
+
+  
 
 
+  
+
+  <!-- External Keyboard -->
+  <item>
+    <name>External Keyboard</name>
+
+    <item>
+      <name>Keyboard Shortcuts</name>
+      <item>
+        <name>Command + M = Command + X</name>
+        <identifier>ek.Command + M = Command + X</identifier>
+        <device_only>DeviceVendor::Corsair_K70, DeviceProduct::Corsair_K70</device_only>
+        <autogen>__KeyToKey__
+          KeyCode::M, ModifierFlag::COMMAND_R,
+          KeyCode::X, ModifierFlag::COMMAND_R
+        </autogen>
+      </item>
+
+      <item>
+        <name>Command + , = Command + C</name>
+        <identifier>ek.Command + , = Command + C</identifier>
+        <device_only>DeviceVendor::Corsair_K70, DeviceProduct::Corsair_K70</device_only>
+        <autogen>__KeyToKey__
+          KeyCode::COMMA, ModifierFlag::COMMAND_R,
+          KeyCode::C, ModifierFlag::COMMAND_R
+        </autogen>
+      </item>
+
+      <item>
+        <name>Command + . = Command + V</name>
+        <identifier>ek.Command + . = Command + V</identifier>
+        <device_only>DeviceVendor::Corsair_K70, DeviceProduct::Corsair_K70</device_only>
+        <autogen>__KeyToKey__
+          KeyCode::DOT, ModifierFlag::COMMAND_R,
+          KeyCode::V, ModifierFlag::COMMAND_R
+        </autogen>
+      </item>
+
+      <item>
+        <name>Command + ; = Delete Current Word</name>
+        <identifier>ek.Command + ; = Delete Current Word</identifier>
+        <device_only>DeviceVendor::Corsair_K70, DeviceProduct::Corsair_K70</device_only>
+        <autogen>
+          __KeyToKey__
+          KeyCode::SEMICOLON, ModifierFlag::COMMAND_R | ModifierFlag::NONE,
+          KeyCode::CURSOR_LEFT, ModifierFlag::OPTION_R,
+          KeyCode::CURSOR_RIGHT, ModifierFlag::OPTION_R | ModifierFlag::SHIFT_R,
+          KeyCode::FORWARD_DELETE,
+          Option::NOREPEAT
+        </autogen>
+      </item>
+
+      <item>
+        <name>Command + ' = Delete Current Line</name>
+        <identifier>ek.Command + ' = Delete Current Line</identifier>
+        <device_only>DeviceVendor::Corsair_K70, DeviceProduct::Corsair_K70</device_only>
+        <autogen>
+          __KeyToKey__
+          KeyCode::QUOTE, ModifierFlag::COMMAND_R | ModifierFlag::NONE,
+          KeyCode::CURSOR_LEFT, ModifierFlag::COMMAND_R,
+          KeyCode::CURSOR_RIGHT, ModifierFlag::COMMAND_R | ModifierFlag::SHIFT_R,
+          KeyCode::FORWARD_DELETE,
+          Option::NOREPEAT
+        </autogen>
+      </item>
+
+      <item>
+        <name>Command + [ = Command + W</name>
+        <identifier>ek.Command + [ = Command + W</identifier>
+        <device_only>DeviceVendor::Corsair_K70, DeviceProduct::Corsair_K70</device_only>
+        <autogen>__KeyToKey__
+          KeyCode::BRACKET_LEFT, ModifierFlag::COMMAND_R,
+          KeyCode::W, ModifierFlag::COMMAND_R
+        </autogen>
+      </item>
+
+      <item>
+        <name>Command + ] = Command + Q</name>
+        <identifier>ek.Command + ] = Command + Q</identifier>
+        <device_only>DeviceVendor::Corsair_K70, DeviceProduct::Corsair_K70</device_only>
+        <autogen>__KeyToKey__
+          KeyCode::BRACKET_RIGHT, ModifierFlag::COMMAND_R,
+          KeyCode::Q, ModifierFlag::COMMAND_R
+        </autogen>
+      </item>
+
+      <item>
+        <name>Command + \ = Command + Tab</name>
+        <identifier>ek.Command + \ = Command + Tab</identifier>
+        <device_only>DeviceVendor::Corsair_K70, DeviceProduct::Corsair_K70</device_only>
+        <autogen>__KeyToKey__
+          KeyCode::BACKSLASH, ModifierFlag::COMMAND_R,
+          KeyCode::TAB, ModifierFlag::COMMAND_R
+        </autogen>
+      </item>     
+    </item> <!-- Keyboard Shortcuts -->
+
+    <item>
+      <name>Modifier Keys</name>
+      <item>
+        <name>Alt Left</name>
+        <item>
+          <name>Alt Left = Command Left</name>
+          <identifier>ek.Alt Left = Command Left</identifier>
+          <device_only>DeviceVendor::Corsair_K70, DeviceProduct::Corsair_K70</device_only>
+          <autogen>__KeyToKey__ KeyCode::OPTION_L, KeyCode::COMMAND_L
+          </autogen>
+        </item>
+      </item>
+
+      <item>
+        <name>Alt Right</name>
+        <item>
+          <name>Alt Right = Command Right</name>
+          <identifier>ek.Alt Right = Command Right</identifier>
+          <device_only>DeviceVendor::Corsair_K70, DeviceProduct::Corsair_K70</device_only>
+          <autogen>__KeyToKey__ KeyCode::OPTION_R, KeyCode::COMMAND_R
+          </autogen>
+        </item>
+      </item>
+
+      <item>
+        <name>Insert</name>
+        <item>
+          <name>Insert = Escape</name>
+          <identifier>ek.Insert = Escape</identifier>
+          <device_only>DeviceVendor::Corsair_K70, DeviceProduct::Corsair_K70</device_only>
+          <autogen>__KeyToKey__ KeyCode::PC_INSERT, KeyCode::ESCAPE</autogen>
+        </item>
+      </item>
 
 
+      <item>
+        <name>Windows Left</name>
+        <item>
+          <name>Windows Left = Option Left</name>
+          <identifier>ek.Windows Left = Option Left</identifier>
+          <device_only>DeviceVendor::Corsair_K70, DeviceProduct::Corsair_K70</device_only>
+          <autogen>__KeyToKey__ KeyCode::COMMAND_L, KeyCode::OPTION_L
+          </autogen>
+        </item>
+      </item>
+
+      <item>
+        <name>Windows Right</name>
+        <item>
+          <name>Windows Right = Option Right</name>
+          <identifier>ek.Windows Right = Option Right</identifier>
+          <device_only>DeviceVendor::Corsair_K70, DeviceProduct::Corsair_K70</device_only>
+          <autogen>__KeyToKey__ KeyCode::COMMAND_R, KeyCode::OPTION_R
+          </autogen>
+        </item>
+      </item>
+    </item>
+
+    <item>
+      <name>Navigation Keys</name>
+
+      <item>
+        <name>Home = Home</name>
+        <identifier>ek.Home = Home</identifier>
+        <device_only>DeviceVendor::Corsair_K70, DeviceProduct::Corsair_K70</device_only>
+        <autogen>__KeyToKey__ KeyCode::HOME, KeyCode::CURSOR_LEFT, ModifierFlag::COMMAND_R</autogen>
+      </item>
+
+      <item>
+        <name>End = End</name>
+        <identifier>ek.End = End</identifier>
+        <device_only>DeviceVendor::Corsair_K70, DeviceProduct::Corsair_K70</device_only>
+        <autogen>__KeyToKey__ KeyCode::END, KeyCode::CURSOR_RIGHT, ModifierFlag::COMMAND_R</autogen>
+      </item>
+    </item>
+  </item>
 
 
   <!-- Internal Keyboard -->
   <item>
     <name>Internal Keyboard</name>
-
-    <!-- Command Click -->    
     <item>
-      <name>Emacs</name>
-      
-      <!-- osx home/end for terminal -->
+      <name>Function Keys</name>
       <item>
-        <appendix>Control + H = Control + A (Terminal)</appendix>
-        <identifier>osx.home_terminal</identifier>
-        <only>TERMINAL</only>
-        <windowname_not>Windows_VM</windowname_not>
-        <device_only>DeviceVendor::Internal_Keyboard, DeviceProduct::Internal_Keyboard</device_only>
-        <autogen>__KeyToKey__ 
-          KeyCode::H, ModifierFlag::CONTROL_R,
-          KeyCode::CURSOR_LEFT, ModifierFlag::COMMAND_L
-        </autogen>
-      </item>
+        <name>Escape</name>
+        <item>
+          <name>Escape = Forward Delete</name>
+          <identifier>osx.Escape = Forward Delete</identifier>
+          <device_only>DeviceVendor::Internal_Keyboard, DeviceProduct::Internal_Keyboard</device_only>
+          <autogen>__KeyToKey__ KeyCode::ESCAPE, KeyCode::FORWARD_DELETE</autogen>
+        </item>
+
+        <item>
+          <name>Escape = Return</name>
+          <identifier>osx.escape_to_return</identifier>
+          <device_only>DeviceVendor::Internal_Keyboard, DeviceProduct::Internal_Keyboard</device_only>
+          <autogen>__KeyToKey__ KeyCode::ESCAPE, KeyCode::RETURN</autogen>
+        </item>
+      </item> <!-- Escape -->
 
       <item>
-        <appendix>Control + J = hControl + E (Terminal)</appendix>
-        <identifier>osx.end_terminal</identifier>
-        <only>TERMINAL</only>
-        <windowname_not>Windows_VM</windowname_not>
-        <device_only>DeviceVendor::Internal_Keyboard, DeviceProduct::Internal_Keyboard</device_only>
-        <autogen>__KeyToKey__ 
-          KeyCode::J, ModifierFlag::CONTROL_R,
-          KeyCode::CURSOR_RIGHT, ModifierFlag::COMMAND_L
-        </autogen>
-      </item>
+        <name>F1</name>
+        <item>
+          <name>Command + F1 = Keyboard Light Low</name>
+          <identifier>osx.F1 = Command + F1 = Keyboard Light Low</identifier>
+          <device_only>DeviceVendor::Internal_Keyboard, DeviceProduct::Internal_Keyboard</device_only>
+          <autogen>__KeyToKey__
+            ConsumerKeyCode::BRIGHTNESS_DOWN, ModifierFlag::COMMAND_L,
+            ConsumerKeyCode::KEYBOARDLIGHT_LOW
+          </autogen>
+        </item>
 
-      <!-- osx home/end -->
+        <item>
+          <name>F1 = Delete</name>
+          <identifier>osx.F1 = Delete</identifier>
+          <device_only>DeviceVendor::Internal_Keyboard, DeviceProduct::Internal_Keyboard</device_only>
+          <autogen>__KeyToKey__ ConsumerKeyCode::BRIGHTNESS_DOWN, KeyCode::DELETE</autogen>
+        </item>
+
+        <item>
+          <name>F1 = Disabled</name>
+          <identifier>osx.F1 = Disabled</identifier>
+          <device_only>DeviceVendor::Internal_Keyboard, DeviceProduct::Internal_Keyboard</device_only>
+          <autogen>__KeyToKey__ ConsumerKeyCode::BRIGHTNESS_DOWN, KeyCode::VK_NONE</autogen>
+        </item>
+
+        <item>
+          <name>F1 = Forward Delete</name>
+          <identifier>osx.f1_to_forward_delete</identifier>
+          <device_only>DeviceVendor::Internal_Keyboard, DeviceProduct::Internal_Keyboard</device_only>
+          <autogen>__KeyToKey__ ConsumerKeyCode::BRIGHTNESS_DOWN, KeyCode::FORWARD_DELETE</autogen>
+        </item>
+
+        <item>
+          <name>F1 = Refresh (OSX)</name>
+          <identifier>osx.f1_to_command_r</identifier>
+          <device_only>DeviceVendor::Internal_Keyboard, DeviceProduct::Internal_Keyboard</device_only>
+          <autogen>__KeyToKey__ ConsumerKeyCode::BRIGHTNESS_DOWN, KeyCode::R, ModifierFlag::COMMAND_L</autogen>
+        </item>
+
+        <item>
+          <name>F1 = Refresh (Windows VM)</name>
+          <identifier>windows_vm.f1_to_f5</identifier>
+          <windowname_only>Windows_VM</windowname_only>
+          <device_only>DeviceVendor::Internal_Keyboard, DeviceProduct::Internal_Keyboard</device_only>        
+          <autogen>__KeyToKey__ ConsumerKeyCode::BRIGHTNESS_DOWN, KeyCode::F5</autogen>
+        </item>
+
+        <item>
+          <name>F1 = Return</name>
+          <identifier>osx.f1_to_return</identifier>
+          <device_only>DeviceVendor::Internal_Keyboard, DeviceProduct::Internal_Keyboard</device_only>
+          <autogen>__KeyToKey__ ConsumerKeyCode::BRIGHTNESS_DOWN, KeyCode::RETURN</autogen>
+        </item>
+      </item> <!-- F1 -->
+
       <item>
-        <appendix>Control + H = Command + Left Arrow (OSX Home)</appendix>
-        <identifier>osx.home_regular</identifier>
-        <windowname_not>Windows_VM</windowname_not>
-        <device_only>DeviceVendor::Internal_Keyboard, DeviceProduct::Internal_Keyboard</device_only>
-        <autogen>__KeyToKey__ 
-          KeyCode::H, ModifierFlag::CONTROL_R,
-          KeyCode::CURSOR_LEFT, ModifierFlag::COMMAND_L
-        </autogen>
-      </item>
+        <name>F2</name>
+        <item>
+          <name>Command + F2 = Keyboard Light High</name>
+          <identifier>osx.F2 = Command + F2 = Keyboard Light High</identifier>
+          <device_only>DeviceVendor::Internal_Keyboard, DeviceProduct::Internal_Keyboard</device_only>
+          <autogen>__KeyToKey__
+            ConsumerKeyCode::BRIGHTNESS_UP, ModifierFlag::COMMAND_L,
+            ConsumerKeyCode::KEYBOARDLIGHT_HIGH
+          </autogen>
+        </item>
+
+        <item>
+          <name>F2 = Disabled</name>
+          <identifier>osx.F2 = Disabled</identifier>
+          <device_only>DeviceVendor::Internal_Keyboard, DeviceProduct::Internal_Keyboard</device_only>
+          <autogen>__KeyToKey__ ConsumerKeyCode::BRIGHTNESS_UP, KeyCode::VK_NONE</autogen>
+        </item>
+
+        <item>
+          <name>F2 = Escape</name>
+          <identifier>osx.F2 = Escape</identifier>
+          <device_only>DeviceVendor::Internal_Keyboard, DeviceProduct::Internal_Keyboard</device_only>        
+          <autogen>__KeyToKey__ ConsumerKeyCode::BRIGHTNESS_UP, KeyCode::ESCAPE</autogen>
+        </item>
+
+        <item>
+          <name>F2 = F2 (Windows VM)</name>
+          <identifier>osx.F2 = F2 (Windows VM)</identifier>
+          <windowname_only>Windows_VM</windowname_only>
+          <device_only>DeviceVendor::Internal_Keyboard, DeviceProduct::Internal_Keyboard</device_only>        
+          <autogen>__KeyToKey__ ConsumerKeyCode::BRIGHTNESS_UP, KeyCode::F2</autogen>
+        </item>
+
+        <item>
+          <name>F2 = Refresh (OSX)</name>
+          <identifier>osx.F2 = Refresh (OSX)</identifier>
+          <device_only>DeviceVendor::Internal_Keyboard, DeviceProduct::Internal_Keyboard</device_only>
+          <autogen>__KeyToKey__ ConsumerKeyCode::BRIGHTNESS_UP, KeyCode::R, ModifierFlag::COMMAND_L</autogen>
+        </item>
+
+        <item>
+          <name>F2 = Refresh (Windows VM)</name>
+          <identifier>windows_vm.F2 = Refresh (Windows VM)</identifier>
+          <windowname_only>Windows_VM</windowname_only>
+          <device_only>DeviceVendor::Internal_Keyboard, DeviceProduct::Internal_Keyboard</device_only>        
+          <autogen>__KeyToKey__ ConsumerKeyCode::BRIGHTNESS_UP, KeyCode::F5</autogen>
+        </item>
+
+        <item>
+          <name>F2 = Return</name>
+          <identifier>osx.f2_to_return</identifier>
+          <device_only>DeviceVendor::Internal_Keyboard, DeviceProduct::Internal_Keyboard</device_only>
+          <autogen>__KeyToKey__ ConsumerKeyCode::BRIGHTNESS_UP, KeyCode::RETURN</autogen>
+        </item>
+      </item> <!-- F2 -->
 
       <item>
-        <appendix>Control + J = Command + Right Arrow (OSX End)</appendix>
-        <identifier>osx.end_regular</identifier>
-        <windowname_not>Windows_VM</windowname_not>
-        <device_only>DeviceVendor::Internal_Keyboard, DeviceProduct::Internal_Keyboard</device_only>
-        <autogen>__KeyToKey__ 
-          KeyCode::J, ModifierFlag::CONTROL_R,
-          KeyCode::CURSOR_RIGHT, ModifierFlag::COMMAND_L
-        </autogen>
-      </item>
+        <name>F3</name>
+        <item>
+          <name>F3 = Disabled</name>
+          <identifier>osx.F3 = Disabled</identifier>
+          <device_only>DeviceVendor::Internal_Keyboard, DeviceProduct::Internal_Keyboard</device_only>
+          <autogen>__KeyToKey__ KeyCode::MISSION_CONTROL, KeyCode::VK_NONE</autogen>
+        </item>
 
-      <!-- windows vm home/end -->
+        <item>
+          <name>F3 = Refresh (OSX)</name>
+          <identifier>osx.f3_to_command_r</identifier>
+          <device_only>DeviceVendor::Internal_Keyboard, DeviceProduct::Internal_Keyboard</device_only>
+          <autogen>__KeyToKey__ KeyCode::MISSION_CONTROL, KeyCode::R, ModifierFlag::COMMAND_L</autogen>
+        </item>
+
+        <item>
+          <name>F3 = Refresh (Windows VM)</name>
+          <identifier>windows_vm.f3_to_f5</identifier>
+          <windowname_only>Windows_VM</windowname_only>
+          <device_only>DeviceVendor::Internal_Keyboard, DeviceProduct::Internal_Keyboard</device_only>        
+          <autogen>__KeyToKey__ KeyCode::MISSION_CONTROL, KeyCode::F5</autogen>
+        </item>
+
+        <item>
+          <name>F3 = Screen Brightness Down</name>
+          <identifier>osx.F3 = Screen Brightness Down</identifier>
+          <device_only>DeviceVendor::Internal_Keyboard, DeviceProduct::Internal_Keyboard</device_only>
+          <autogen>__KeyToKey__ KeyCode::MISSION_CONTROL, ConsumerKeyCode::BRIGHTNESS_DOWN</autogen>
+        </item>
+      </item> <!-- F3 -->
+
       <item>
-        <appendix>Control + H = Home (Windows VM)</appendix>
-        <identifier>windows_vm.home_regular</identifier>
-        <windowname_only>Windows_VM</windowname_only>
-        <device_only>DeviceVendor::Internal_Keyboard, DeviceProduct::Internal_Keyboard</device_only>
-        <autogen>__KeyToKey__
-          KeyCode::H, ModifierFlag::CONTROL_R,
-          KeyCode::HOME
-        </autogen>
-      </item>
+        <name>F4</name>
+        <item>
+          <name>F4 = Disabled</name>
+          <identifier>osx.f4_disabled</identifier>
+          <device_only>DeviceVendor::Internal_Keyboard, DeviceProduct::Internal_Keyboard</device_only>
+          <autogen>__KeyToKey__ KeyCode::LAUNCHPAD, KeyCode::VK_NONE</autogen>
+        </item>
+
+        <item>
+          <name>F4 = Escape</name>
+          <identifier>osx.f4_to_escape</identifier>
+          <device_only>DeviceVendor::Internal_Keyboard, DeviceProduct::Internal_Keyboard</device_only>
+          <autogen>__KeyToKey__ KeyCode::LAUNCHPAD, KeyCode::ESCAPE</autogen>
+        </item>
+
+        <item>
+          <name>F4 = Refresh (OSX)</name>
+          <identifier>osx.f4_to_command_r</identifier>
+          <device_only>DeviceVendor::Internal_Keyboard, DeviceProduct::Internal_Keyboard</device_only>
+          <autogen>__KeyToKey__ KeyCode::LAUNCHPAD, KeyCode::R, ModifierFlag::COMMAND_L</autogen>
+        </item>
+
+        <item>
+          <name>F4 = Refresh (Windows VM)</name>
+          <identifier>windows_vm.f4_to_f5</identifier>
+          <windowname_only>Windows_VM</windowname_only>
+          <device_only>DeviceVendor::Internal_Keyboard, DeviceProduct::Internal_Keyboard</device_only>        
+          <autogen>__KeyToKey__ KeyCode::LAUNCHPAD, KeyCode::F5</autogen>
+        </item>
+
+        <item>
+          <name>F4 = Screen Brightness Down</name>
+          <identifier>osx.F4 = Screen Brightness Down</identifier>
+          <device_only>DeviceVendor::Internal_Keyboard, DeviceProduct::Internal_Keyboard</device_only>
+          <autogen>__KeyToKey__ KeyCode::LAUNCHPAD, ConsumerKeyCode::BRIGHTNESS_DOWN</autogen>
+        </item>
+
+        <item>
+          <name>F4 = Screen Brightness Up</name>
+          <identifier>osx.F4 = Screen Brightness Up</identifier>
+          <device_only>DeviceVendor::Internal_Keyboard, DeviceProduct::Internal_Keyboard</device_only>
+          <autogen>__KeyToKey__ KeyCode::LAUNCHPAD, ConsumerKeyCode::BRIGHTNESS_UP</autogen>
+        </item>
+      </item> <!-- F4 -->
 
       <item>
-        <appendix>Control + J = End (Windows VM)</appendix>
-        <identifier>windows_vm.end_regular</identifier>
-        <windowname_only>Windows_VM</windowname_only>
-        <device_only>DeviceVendor::Internal_Keyboard, DeviceProduct::Internal_Keyboard</device_only>
-        <autogen>__KeyToKey__ 
-          KeyCode::J, ModifierFlag::CONTROL_R,
-          KeyCode::END
-        </autogen>
-      </item>
-    </item>
+        <name>F5</name>
+        <item>
+          <name>F5 = Disabled</name>
+          <identifier>osx.F5 = Disabled</identifier>
+          <device_only>DeviceVendor::Internal_Keyboard, DeviceProduct::Internal_Keyboard</device_only>
+          <autogen>__KeyToKey__ ConsumerKeyCode::KEYBOARDLIGHT_LOW, KeyCode::VK_NONE</autogen>
+        </item>
 
-    <!-- Command Click -->
-    <item>
-      <name>Command Click</name>
+        <item>
+          <name>F5 = Screen Brightness Down</name>
+          <identifier>osx.f5_to_screen_brightness_down</identifier>
+          <device_only>DeviceVendor::Internal_Keyboard, DeviceProduct::Internal_Keyboard</device_only>
+          <autogen>__KeyToKey__ ConsumerKeyCode::KEYBOARDLIGHT_LOW, ConsumerKeyCode::BRIGHTNESS_DOWN</autogen>
+        </item>
+
+        <item>
+          <name>F5 = Screen Brightness Up</name>
+          <identifier>osx.F5 = Screen Brightness Up</identifier>
+          <device_only>DeviceVendor::Internal_Keyboard, DeviceProduct::Internal_Keyboard</device_only>
+          <autogen>__KeyToKey__ ConsumerKeyCode::KEYBOARDLIGHT_LOW, ConsumerKeyCode::BRIGHTNESS_UP</autogen>
+        </item>
+      </item> <!-- F5 -->
+
       <item>
-        <identifier>osx.command_click</name>
-        <appendix>Right Option = Command Click</appendix>
-        <autogen>__KeyToKey__
-          KeyCode::OPTION_R, 
-          PointingButton::LEFT, ModifierFlag::COMMAND_R
-        </autogen>
-      </item>
-    </item> 
+        <name>F6</name>
+        <item>
+          <name>F6 = Disabled</name>
+          <identifier>osx.F6 = Disabled</identifier>
+          <device_only>DeviceVendor::Internal_Keyboard, DeviceProduct::Internal_Keyboard</device_only>
+          <autogen>__KeyToKey__ ConsumerKeyCode::KEYBOARDLIGHT_HIGH, KeyCode::VK_NONE</autogen>
+        </item>
 
+        <item>
+          <name>F6 = Screen Brightness Up</name>
+          <identifier>osx.f6_to_screen_brightness_up</identifier>
+          <device_only>DeviceVendor::Internal_Keyboard, DeviceProduct::Internal_Keyboard</device_only>
+          <autogen>__KeyToKey__ ConsumerKeyCode::KEYBOARDLIGHT_HIGH, ConsumerKeyCode::BRIGHTNESS_UP</autogen>
+        </item>
+      </item> <!-- F6 -->
 
-    <!-- Capslock -->
-    <item>
-      <name>Capslock</name>
       <item>
-        <identifier>osx.control_left_to_capslock</name>
-        <appendix>Left Control = Capslock</appendix>
-        <autogen>__KeyToKey__
-          KeyCode::CONTROL_L,
-          KeyCode::CAPSLOCK
-        </autogen>
-      </item>
-    </item> 
+        <name>F7</name>
+        <item>
+          <name>F7 = Disabled</name>
+          <identifier>osx.F7 = Disabled</identifier>
+          <device_only>DeviceVendor::Internal_Keyboard, DeviceProduct::Internal_Keyboard</device_only>
+          <autogen>__KeyToKey__ ConsumerKeyCode::MUSIC_PREV, KeyCode::VK_NONE</autogen>
+        </item>
+
+        <item>
+          <name>F7 = Keyboard Light Low</name>
+          <identifier>osx.f7_to_keyboard_light_low</identifier>
+          <device_only>DeviceVendor::Internal_Keyboard, DeviceProduct::Internal_Keyboard</device_only>
+          <autogen>__KeyToKey__ ConsumerKeyCode::MUSIC_PREV, ConsumerKeyCode::KEYBOARDLIGHT_LOW</autogen>
+        </item>
+
+        <item>
+
+          <name>F7 = Volume Mute</name>
+          <identifier>osx.f7_to_volume_mute</identifier>
+          <device_only>DeviceVendor::Internal_Keyboard, DeviceProduct::Internal_Keyboard</device_only>
+          <autogen>__KeyToKey__ ConsumerKeyCode::MUSIC_PREV, ConsumerKeyCode::VOLUME_MUTE</autogen>
+        </item>
+      </item> <!-- F7 -->
+
+      <item>
+        <name>F8</name>
+        <item>
+          <name>F8 = Disabled</name>
+          <identifier>osx.f8_disabled</identifier>
+          <device_only>DeviceVendor::Internal_Keyboard, DeviceProduct::Internal_Keyboard</device_only>
+          <autogen>__KeyToKey__ ConsumerKeyCode::MUSIC_PLAY, KeyCode::VK_NONE</autogen>
+        </item>
+
+        <item>
+          <name>F8 = Keyboard Light High</name>
+          <identifier>osx.f8_to_keyboard_light_high</identifier>
+          <device_only>DeviceVendor::Internal_Keyboard, DeviceProduct::Internal_Keyboard</device_only>
+          <autogen>__KeyToKey__ ConsumerKeyCode::MUSIC_PLAY, ConsumerKeyCode::KEYBOARDLIGHT_HIGH</autogen>
+        </item>
+
+        <item>
+          <name>F8 = Volume Down</name>
+          <identifier>osx.f8_to_volume_down</identifier>
+          <device_only>DeviceVendor::Internal_Keyboard, DeviceProduct::Internal_Keyboard</device_only>
+          <autogen>__KeyToKey__ ConsumerKeyCode::MUSIC_PLAY, ConsumerKeyCode::VOLUME_DOWN</autogen>
+        </item>
+      </item> <!-- F8 -->
+
+      <item>
+        <name>F9</name>
+        <item>
+          <name>F9 = Disabled</name>
+          <identifier>osx.f9_disabled</identifier>
+          <device_only>DeviceVendor::Internal_Keyboard, DeviceProduct::Internal_Keyboard</device_only>
+          <autogen>__KeyToKey__ ConsumerKeyCode::MUSIC_NEXT, KeyCode::VK_NONE</autogen>
+        </item>
+
+        <item>
+          <name>F9 = Volume Up</name>
+          <identifier>osx.F9 = Volume Up</identifier>
+          <device_only>DeviceVendor::Internal_Keyboard, DeviceProduct::Internal_Keyboard</device_only>
+          <autogen>__KeyToKey__ ConsumerKeyCode::MUSIC_NEXT, ConsumerKeyCode::VOLUME_UP</autogen>
+        </item>
+      </item> <!-- F9 -->
+
+      <item>
+        <name>F11</name>
+        <item>
+          <name>F11 = Home (OSX)</name>
+          <identifier>osx.f11_to_home</identifier>
+          <windowname_not>YouTube</windowname_not>
+          <windowname_not>Windows_VM</windowname_not>
+          <device_only>DeviceVendor::Internal_Keyboard, DeviceProduct::Internal_Keyboard</device_only>
+          <autogen>__KeyToKey__ ConsumerKeyCode::VOLUME_DOWN, KeyCode::CURSOR_LEFT, ModifierFlag::COMMAND_L</autogen>
+        </item>
+
+        <item>
+          <name>F11 = Home (Windows VM)</name>
+          <identifier>windows_vm.f11_to_home</identifier>
+          <windowname_only>Windows_VM</windowname_only>
+          <device_only>DeviceVendor::Internal_Keyboard, DeviceProduct::Internal_Keyboard</device_only>
+          <autogen>__KeyToKey__ ConsumerKeyCode::VOLUME_DOWN, KeyCode::HOME</autogen>
+        </item>
+      </item> <!-- F11 -->
+
+      <item>
+        <name>F12</name>
+        <item>
+          <name>F12 = End (OSX)</name>
+          <identifier>osx.end</identifier>
+          <windowname_not>Windows_VM</windowname_not>
+          <windowname_not>YouTube</windowname_not>
+          <device_only>DeviceVendor::Internal_Keyboard, DeviceProduct::Internal_Keyboard</device_only>
+          <autogen>__KeyToKey__ ConsumerKeyCode::VOLUME_UP, KeyCode::CURSOR_RIGHT, ModifierFlag::COMMAND_L</autogen>
+        </item>
+
+        <item>
+          <name>F12 = End (Windows VM)</name>
+          <identifier>windows_vm.end</identifier>
+          <windowname_only>Windows_VM</windowname_only>
+          <device_only>DeviceVendor::Internal_Keyboard, DeviceProduct::Internal_Keyboard</device_only>
+          <autogen>__KeyToKey__ ConsumerKeyCode::VOLUME_UP, KeyCode::END</autogen>
+        </item>
+      </item> <!-- F12 -->
+    </item> <!-- Function Keys -->
 
 
     <!-- Modifier Keys -->
     <item>
       <name>Modifier Keys</name>
       <item>
-        <appendix>Left Command = Left Control (Windows VM)</appendix>
-        <identifier>windows_vm.left_command_to_left_control</identifier>
-        <windowname_only>Windows_VM</windowname_only>
-        <device_only>DeviceVendor::Internal_Keyboard, DeviceProduct::Internal_Keyboard</device_only>
-        <autogen>__KeyToKey__
-          KeyCode::COMMAND_L,
-          KeyCode::CONTROL_L
-        </autogen>
-      </item>
-
-      <item>
-        <appendix>Right Command = Right Control (Windows VM)</appendix>
-        <identifier>windows_vm.right_command_to_control_right</identifier>
-        <windowname_only>Windows_VM</windowname_only>
-        <device_only>DeviceVendor::Internal_Keyboard, DeviceProduct::Internal_Keyboard</device_only>
-        <autogen>__KeyToKey__
-          KeyCode::COMMAND_R,
-          KeyCode::CONTROL_R
-        </autogen>
-      </item>
-    </item> 
-
-
-    <!-- Screen Brightness -->
-    <item>
-      <name>Screen Brightness</name>
-      <item>
-        <appendix>Screen Brightness Down Moved Position on Keyboard</appendix>
-        <identifier>osx.screen_brightness_down</identifier>
-        <device_only>DeviceVendor::Internal_Keyboard, DeviceProduct::Internal_Keyboard</device_only>
-        <autogen>__KeyToKey__
-          ConsumerKeyCode::MUSIC_PREV | ModifierFlag::NONE,
-          ConsumerKeyCode::BRIGHTNESS_DOWN
-        </autogen>
-      </item>
-
-      <item>
-        <appendix>Screen Brightness Up Moved Position on Keyboard</appendix>
-        <identifier>osx.screen_brightness_up</identifier>
-        <device_only>DeviceVendor::Internal_Keyboard, DeviceProduct::Internal_Keyboard</device_only>
-        <autogen>__KeyToKey__
-          ConsumerKeyCode::MUSIC_PLAY | ModifierFlag::NONE,
-          ConsumerKeyCode::BRIGHTNESS_UP
-        </autogen>
-      </item>
-    </item> 
-
-
-    <!-- Next Window -->
-    <item>
-      <name>Next Window</name>
-      <item>
-        <identifier>osx.next_window</identifier>
-        <windowname_not>Windows_VM</windowname_not>
-        <device_only>DeviceVendor::Internal_Keyboard, DeviceProduct::Internal_Keyboard</device_only>
-        <appendix>OPTION_R = Next Window</appendix>
-        <autogen>__KeyToKey__
-          KeyCode::OPTION_R,
-          KeyCode::F4, ModifierFlag::CONTROL_R
-        </autogen>
-      </item>
-
-      <item>
-          <identifier>osx.next_window_shift</identifier>
-          <windowname_not>Windows_VM</windowname_not>
-          <device_only>DeviceVendor::Internal_Keyboard, DeviceProduct::Internal_Keyboard</device_only>
-          <appendix>SHIFT_R + CURSOR_LEFT = Next Window</appendix>
-          <autogen>__KeyToKey__ 
-            KeyCode::CURSOR_LEFT, ModifierFlag::SHIFT_R,
-            KeyCode::F4, ModifierFlag::CONTROL_R
-          </autogen>
-      </item>
-
-      <!--
-      <item>
-          <identifier>osx.next_window_shift</identifier>
-          <windowname_not>Windows_VM</windowname_not>
-          <device_only>DeviceVendor::Internal_Keyboard, DeviceProduct::Internal_Keyboard</device_only>
-          <appendix>SHIFT_R + OPTION_R = Next Window</appendix>
-          <autogen>__KeyToKey__ 
-            KeyCode::OPTION_R, ModifierFlag::SHIFT_R,
-            KeyCode::F4, ModifierFlag::CONTROL_R
-          </autogen>
-      </item>
-      -->
-    </item> 
-
-    
-    <!-- Next/Previous Tab -->
-    <item>
-      <name>Next/Previous Tab</name>
-      <!-- chrome and opera -->
-      <item>
-        <name>Chrome/Opera</name>
+        <name>Capslock (Seil remapped Capslock to Control Right)</name>
         <item>
-          <appendix>Right Shift + Right Option = Previous Tab</appendix>
-          <identifier>osx.right_shift_and_right_option_to_previous_tab_in_chrome_and_opera</identifier>
-          <windowname_not>Windows_VM</windowname_not>
-          <only>GOOGLE_CHROME, OPERA</only>
+          <name>Capslock = Control Right (Capslock when pressed alone)</name>
+          <identifier>osx.Capslock = Control Right (Capslock when pressed alone)</identifier>
           <device_only>DeviceVendor::Internal_Keyboard, DeviceProduct::Internal_Keyboard</device_only>
-          <autogen>__KeyToKey__ 
-            KeyCode::OPTION_R, ModifierFlag::SHIFT_R,
-            KeyCode::CURSOR_LEFT, ModifierFlag::COMMAND_L | ModifierFlag::OPTION_L
+          <autogen>
+            __KeyOverlaidModifier__
+            KeyCode::CONTROL_R,
+            KeyCode::CONTROL_R,
+            KeyCode::CAPSLOCK
+          </autogen>
+        </item>
+      </item> <!-- Capslock -->
+
+      <item>
+        <name>Command Left</name>
+        <item>
+          <name>Command Left = Control Left (Windows VM)</name>
+          <identifier>windows_vm.command_left_to_control_left</identifier>
+          <windowname_only>Windows_VM</windowname_only>
+          <device_only>DeviceVendor::Internal_Keyboard, DeviceProduct::Internal_Keyboard</device_only>
+          <autogen>
+            __KeyOverlaidModifier__
+            KeyCode::COMMAND_L,
+            KeyCode::CONTROL_L,
+            KeyCode::FORWARD_DELETE
+          </autogen>
+        </item> <!-- Command Left to Control Left -->
+
+        <item>
+          <name>Command Left = Command Left</name>
+          <appendix>Forward Delete when pressed alone</appendix>
+          <identifier>osx.Command Left = Forward Delete when pressed alone</identifier>
+          <windowname_not>Windows_VM</windowname_not>
+          <device_only>DeviceVendor::Internal_Keyboard, DeviceProduct::Internal_Keyboard</device_only>
+          <autogen>
+            __KeyOverlaidModifier__
+            KeyCode::COMMAND_L,
+            KeyCode::COMMAND_L,
+            KeyCode::FORWARD_DELETE
           </autogen>
         </item>
 
         <item>
-          <appendix>Right Option = Next Tab</appendix>
-          <identifier>osx.right_option_to_next_tab_in_chrome</identifier>
+          <name>Command Left = Command Left</name>
+          <appendix>Return when pressed alone</appendix>
+          <identifier>osx.Command Left = Command Left (Return when pressed alone)</identifier>
+          <windowname_not>Windows_VM</windowname_not>
+          <device_only>DeviceVendor::Internal_Keyboard, DeviceProduct::Internal_Keyboard</device_only>
+          <autogen>
+            __KeyOverlaidModifier__
+            KeyCode::COMMAND_L,
+            KeyCode::COMMAND_L,
+            KeyCode::RETURN
+          </autogen>
+        </item>
+      </item> <!-- Command Left -->
+
+      <item>
+        <name>Command Right</name>
+        <item>
+          <name>Command Right = Control Right (Windows VM)</name>
+          <appendix>Forward Delete when pressed alone</appendix>
+          <identifier>windows_vm.command_right_to_control_right</identifier>
+          <windowname_only>Windows_VM</windowname_only>
+          <device_only>DeviceVendor::Internal_Keyboard, DeviceProduct::Internal_Keyboard</device_only>
+          <autogen>__KeyToKey__ KeyCode::COMMAND_R, KeyCode::CONTROL_R</autogen>
+          <autogen>
+            __KeyOverlaidModifier__
+            KeyCode::COMMAND_R,
+            KeyCode::CONTROL_R,
+            KeyCode::FORWARD_DELETE
+          </autogen>
+        </item>
+
+        <item>
+          <name>Command Right = Command Right</name>
+          <appendix>Forward Delete when pressed alone</appendix>
+          <identifier>osx.command_right_to_forward_delete</identifier>
+          <windowname_not>Windows_VM</windowname_not>
+          <device_only>DeviceVendor::Internal_Keyboard, DeviceProduct::Internal_Keyboard</device_only>
+          <autogen>
+            __KeyOverlaidModifier__
+            KeyCode::COMMAND_R,
+            KeyCode::COMMAND_R,
+            KeyCode::FORWARD_DELETE
+          </autogen>
+        </item>
+
+        <item>
+          <name>Command Right = Command Right</name>
+          <appendix>Command Click when pressed alone</appendix>
+          <windowname_not>Windows_VM</windowname_not>
+          <identifier>osx.Command Right = Command Right (Command Click when pressed alone)</identifier>
+          <device_only>DeviceVendor::Internal_Keyboard, DeviceProduct::Internal_Keyboard</device_only>
+          <autogen>
+            __KeyOverlaidModifier__
+            KeyCode::COMMAND_R,
+            KeyCode::COMMAND_R,
+            PointingButton::LEFT, ModifierFlag::COMMAND_R
+          </autogen>
+        </item>
+      </item> <!-- Command Right -->
+
+      <item>
+        <name>Control Left</name>
+        <item>
+          <name>Control Left = Capslock</name>
+          <identifier>osx.control_left_to_capslock</name>
+          <autogen>__KeyToKey__ KeyCode::CONTROL_L, KeyCode::CAPSLOCK</autogen>
+        </item> <!-- Capslock -->
+      </item> <!-- Control Left -->
+
+      <item>
+        <name>Function</name>
+        <item>
+          <name>Function = Capslock</name>
+          <identifier>osx.fn_to_capslock_fn</name>
+          <autogen>__KeyToKey__ KeyCode::FN, KeyCode::CAPSLOCK</autogen>
+        </item> <!-- Capslock -->
+      </item> <!-- Function -->
+
+      <item>
+        <name>Option Left</name>
+        <item>
+          <name>Option Left = Option Left</name>
+          <appendix>Forward Delete when pressed alone</appendix>
+          <identifier>osx.Option Left = Option Left and Forward Delete when pressed alone</identifier>
+          <windowname_not>Windows_VM</windowname_not>
+          <device_only>DeviceVendor::Internal_Keyboard, DeviceProduct::Internal_Keyboard</device_only>
+          <autogen>
+            __KeyOverlaidModifier__
+            KeyCode::OPTION_L,
+            KeyCode::OPTION_L,
+            KeyCode::FORWARD_DELETE
+          </autogen>
+        </item>
+
+        <item>
+          <name>Option Left = Option Left</name>
+          <appendix>Return when pressed alone</appendix>
+          <identifier>osx.Option Left = Option Left and Return when pressed alone</identifier>
+          <windowname_not>Windows_VM</windowname_not>
+          <device_only>DeviceVendor::Internal_Keyboard, DeviceProduct::Internal_Keyboard</device_only>
+          <autogen>
+            __KeyOverlaidModifier__
+            KeyCode::OPTION_L,
+            KeyCode::OPTION_L,
+            KeyCode::RETURN
+          </autogen>
+        </item>
+      </item>
+
+      <item>
+        <name>Option Right</name>
+        <item>
+          <name>Option Right = Option Right</name>
+          <appendix>Command Click when pressed alone</appendix>
+          <identifier>osx.Option Right = Option Right (Command Click when pressed alone)</identifier>
+          <windowname_not>Windows_VM</windowname_not>
+          <device_only>DeviceVendor::Internal_Keyboard, DeviceProduct::Internal_Keyboard</device_only>
+          <autogen>
+            __KeyOverlaidModifier__
+            KeyCode::OPTION_R,
+            KeyCode::OPTION_R,
+            PointingButton::LEFT, ModifierFlag::COMMAND_R
+          </autogen>
+        </item>
+
+        <item>
+          <name>Option Right = Option Right</name>
+          <appendix>Command + w when pressed alone</appendix>
+          <identifier>osx.Option Right = Option Right (Command + w when pressed alone)</identifier>
+          <windowname_not>Windows_VM</windowname_not>
+          <device_only>DeviceVendor::Internal_Keyboard, DeviceProduct::Internal_Keyboard</device_only>
+          <autogen>
+            __KeyOverlaidModifier__
+            KeyCode::OPTION_R,
+            KeyCode::OPTION_R,
+            KeyCode::W, ModifierFlag::COMMAND_R
+          </autogen>
+        </item>
+
+        <item>
+          <name>Option Right = Next Window</name>
+          <identifier>osx.option_right_to_next_window</identifier>
+          <windowname_not>Windows_VM</windowname_not>
+          <device_only>DeviceVendor::Internal_Keyboard, DeviceProduct::Internal_Keyboard</device_only>
+          <autogen>__KeyToKey__ KeyCode::OPTION_R, KeyCode::F4, ModifierFlag::CONTROL_R</autogen>
+        </item> <!-- Next Window -->
+
+        <item>
+          <name>Option Right = Return (when pressed alone)</name>
+          <identifier>osx.option_right_to_return</identifier>
+          <windowname_not>Windows_VM</windowname_not>
+          <device_only>DeviceVendor::Internal_Keyboard, DeviceProduct::Internal_Keyboard</device_only>
+          <autogen>
+            __KeyOverlaidModifier__
+            KeyCode::OPTION_R,
+            KeyCode::OPTION_R,
+            KeyCode::RETURN
+          </autogen>
+        </item>
+      </item> <!-- Option Right -->
+
+      <item>
+        <name>Sequential Left + Right Shift</name>
+        <item>
+          <name>Sequential Left + Right Shift = Capslock</name>
+          <identifier>osx.Sequential Left + Right Shift = Capslock</identifier>
+          <autogen>__KeyToKey__ KeyCode::SHIFT_L, KeyCode::SHIFT_L, ModifierFlag::EXTRA1</autogen>
+          <autogen>__KeyToKey__ KeyCode::SHIFT_R, ModifierFlag::EXTRA1, KeyCode::CAPSLOCK</autogen>
+        </item>
+      </item> <!-- Sequential Left Then Right Shift -->
+    </item> <!-- Modifier Keys -->
+
+
+    <item>
+      <name>Keyboard Shortcuts</name>
+      <item>
+        <name>Cursor Left</name>
+        <item>
+          <name>Cursor Left = Home</name>
+          <identifier>osx.cursor_left_to_home</identifier>
+          <windowname_not>YouTube</windowname_not>
+          <windowname_not>Windows_VM</windowname_not>
+          <device_only>DeviceVendor::Internal_Keyboard, DeviceProduct::Internal_Keyboard</device_only>
+          <autogen>__KeyToKey__ KeyCode::CURSOR_LEFT, KeyCode::CURSOR_LEFT, ModifierFlag::COMMAND_L</autogen>
+        </item>
+
+        <item>
+          <name>Shift + Cursor Left = Shift + Home</name>
+          <identifier>osx.shift_cursor_left_to_shift_home</identifier>
+          <windowname_not>Windows_VM</windowname_not>
+          <device_only>DeviceVendor::Internal_Keyboard, DeviceProduct::Internal_Keyboard</device_only>
+          <autogen>__KeyToKey__
+            KeyCode::CURSOR_LEFT, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT,
+            KeyCode::CURSOR_LEFT, ModifierFlag::COMMAND_L, ModifierFlag::SHIFT_L
+          </autogen>
+        </item>
+      </item> <!-- Cursor Left -->
+
+      <item>
+        <name>Cursor Right</name>
+        <item>
+          <name>Cursor Right = End</name>
+          <identifier>osx.cursor_right_to_end</identifier>
+          <windowname_not>YouTube</windowname_not>
+          <windowname_not>Windows_VM</windowname_not>
+          <device_only>DeviceVendor::Internal_Keyboard, DeviceProduct::Internal_Keyboard</device_only>
+          <autogen>__KeyToKey__ KeyCode::CURSOR_RIGHT, KeyCode::CURSOR_RIGHT, ModifierFlag::COMMAND_L</autogen>
+        </item>
+
+        <item>
+          <name>Shift + Cursor Right = Shift + End</name>
+          <identifier>osx.shift_cursor_right_to_shift_end</identifier>
+          <windowname_not>YouTube</windowname_not>
+          <windowname_not>Windows_VM</windowname_not>
+          <device_only>DeviceVendor::Internal_Keyboard, DeviceProduct::Internal_Keyboard</device_only>
+          <autogen>__KeyToKey__
+            KeyCode::CURSOR_RIGHT, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT,
+            KeyCode::CURSOR_RIGHT, ModifierFlag::COMMAND_L, ModifierFlag::SHIFT_L
+          </autogen>
+        </item>
+      </item> <!-- Cursor Right -->
+
+      <item>
+        <name>Command Left + 1</name>
+        <item>
+          <name>Command Left + 1 = Shift + Home</name>
+          <identifier>osx.Command Left + 1 = Shift + Home</identifier>
+          <device_only>DeviceVendor::Internal_Keyboard, DeviceProduct::Internal_Keyboard</device_only>
+          <autogen>__KeyToKey__ KeyCode::1, ModifierFlag::COMMAND_L, KeyCode::HOME, ModifierFlag::SHIFT_L</autogen>
+        </item>
+
+        <item>
+          <name>Command Left + 1 = Tab Previous (Chromium)</name>
+          <identifier>osx.command_left_1_to_tab_previous_in_chromium</identifier>
+          <windowname_not>Windows_VM</windowname_not>
+          <only>GOOGLE_CHROME, OPERA</only>
+          <device_only>DeviceVendor::Internal_Keyboard, DeviceProduct::Internal_Keyboard</device_only>
+          <autogen>__KeyToKey__
+            KeyCode::1, ModifierFlag::COMMAND_L,
+            KeyCode::CURSOR_LEFT, ModifierFlag::COMMAND_L | ModifierFlag::OPTION_L
+          </autogen>
+        </item> <!-- Chromium -->
+
+        <item>
+          <name>Command Left + 1 = Tab Previous (Safari)</name>
+          <identifier>osx.command_left_1_to_tab_previous_in_safari</identifier>
+          <device_only>DeviceVendor::Internal_Keyboard, DeviceProduct::Internal_Keyboard</device_only>
+          <windowname_not>Windows_VM</windowname_not>
+          <only>SAFARI</only>
+          <autogen>__KeyToKey__ 
+            KeyCode::1, ModifierFlag::COMMAND_L,
+            KeyCode::BRACKET_LEFT, ModifierFlag::COMMAND_L | ModifierFlag::SHIFT_L
+          </autogen>
+        </item> <!-- Safari -->
+
+        <item>
+          <name>Command Left + 1 = Tab Previous (Sublime Text)</name>
+          <identifier>osx.command_left_1_to_tab_previous_in_sublime</identifier>
+          <windowname_not>Windows_VM</windowname_not>
+          <only>SUBLIME_TEXT_3</only>
+          <device_only>DeviceVendor::Internal_Keyboard, DeviceProduct::Internal_Keyboard</device_only>
+          <autogen>__KeyToKey__ 
+            KeyCode::1, ModifierFlag::COMMAND_L,
+            KeyCode::CURSOR_LEFT, ModifierFlag::COMMAND_L | ModifierFlag::OPTION_L
+          </autogen>
+        </item> <!-- Sublime Text -->
+
+        <item>
+          <name>Command Left + 1 = Tab Previous (Terminal)</name>
+          <identifier>osx.command_left_1_to_tab_previous_in_terminal</identifier>
+          <only>TERMINAL</only>
+          <windowname_not>Windows_VM</windowname_not>
+          <device_only>DeviceVendor::Internal_Keyboard, DeviceProduct::Internal_Keyboard</device_only>
+          <autogen>__KeyToKey__ 
+            KeyCode::1, ModifierFlag::COMMAND_L,
+            KeyCode::CURSOR_LEFT, ModifierFlag::COMMAND_L | ModifierFlag::SHIFT_L
+          </autogen>
+        </item> <!-- Terminal -->
+      </item> <!-- Command Left + 1 -->
+
+      <item>
+        <name>Command Left + 2</name>
+        <item>
+          <name>Command Left + 2 = Shift + End</name>
+          <identifier>osx.Command Left + 2 = Shift + End</identifier>
+          <device_only>DeviceVendor::Internal_Keyboard, DeviceProduct::Internal_Keyboard</device_only>
+          <autogen>__KeyToKey__ KeyCode::2, ModifierFlag::COMMAND_L, KeyCode::END, ModifierFlag::SHIFT_L</autogen>
+        </item>
+
+        <item>
+          <name>Command Left + 2 = Tab Next (Chromium)</name>
+          <identifier>osx.command_left_2_to_tab_next_in_chromium</identifier>
           <windowname_not>Windows_VM</windowname_not>
           <only>GOOGLE_CHROME, OPERA</only>
           <device_only>DeviceVendor::Internal_Keyboard, DeviceProduct::Internal_Keyboard</device_only>  
           <autogen>__KeyToKey__ 
-            KeyCode::OPTION_R,
+            KeyCode::2, ModifierFlag::COMMAND_L,
             KeyCode::CURSOR_RIGHT, ModifierFlag::COMMAND_L | ModifierFlag::OPTION_L
           </autogen>
-        </item>
-      </item> 
-
-      <!-- terminal -->
-      <item>
-        <name>Terminal</name>
-        <item>
-          <appendix>Right Shift + Right Option = Previous Tab</appendix>
-          <identifier>osx.option_right_to_previous_tab_in_terminal</identifier>
-          <windowname_not>Windows_VM</windowname_not>
-          <only>TERMINAL</only>
-          <device_only>DeviceVendor::Internal_Keyboard, DeviceProduct::Internal_Keyboard</device_only>
-          <autogen>__KeyToKey__ 
-            KeyCode::OPTION_R, ModifierFlag::SHIFT_R,
-            KeyCode::CURSOR_LEFT, ModifierFlag::COMMAND_L | ModifierFlag::SHIFT_L
-          </autogen>
-        </item>
+        </item> <!-- Chromium -->
 
         <item>
-          <identifier>osx.right_option_to_next_tab_in_terminal</identifier>
-          <windowname_not>Windows_VM</windowname_not>
-          <only>TERMINAL</only>
-          <device_only>DeviceVendor::Internal_Keyboard, DeviceProduct::Internal_Keyboard</device_only>
-          <appendix>Right Option = Next Tab</appendix>
-          <autogen>__KeyToKey__ 
-            KeyCode::OPTION_R,
-            KeyCode::CURSOR_RIGHT, ModifierFlag::COMMAND_L | ModifierFlag::SHIFT_L
-          </autogen>
-        </item>
-      </item> 
-
-      <!-- safari -->
-      <item>
-        <name>Safari</name>
-        <item>
-          <appendix>Right Shift + Right Option = Previous Tab</appendix>
-          <identifier>osx.right_shift_and_right_option_to_previous_tab_in_safari</identifier>
+          <name>Command Left + 2 = Tab Next (Safari)</name>
+          <identifier>osx.command_left_2_to_tab_next_in_safari</identifier>
           <windowname_not>Windows_VM</windowname_not>
           <only>SAFARI</only>
           <device_only>DeviceVendor::Internal_Keyboard, DeviceProduct::Internal_Keyboard</device_only>
           <autogen>__KeyToKey__ 
-            KeyCode::OPTION_R, ModifierFlag::SHIFT_R,
-            KeyCode::BRACKET_LEFT, ModifierFlag::COMMAND_L | ModifierFlag::SHIFT_L
-          </autogen>
-        </item>
-
-        <item>
-          <appendix>Right Option = Next Tab</appendix>
-          <identifier>osx.right_option_to_next_tab_in_safari</identifier>
-          <windowname_not>Windows_VM</windowname_not>
-          <only>SAFARI</only>
-          <device_only>DeviceVendor::Internal_Keyboard, DeviceProduct::Internal_Keyboard</device_only>
-          <autogen>__KeyToKey__ 
-            KeyCode::OPTION_R,
+            KeyCode::2, ModifierFlag::COMMAND_L,
             KeyCode::BRACKET_RIGHT, ModifierFlag::COMMAND_L | ModifierFlag::SHIFT_L
           </autogen>
-        </item>
-      </item> 
-
-      <!-- sublime -->
-      <item>
-        <name>Sublime Text 2</name>
-        <item>
-          <appendix>Right Shift + Right Option = Previous Tab</appendix>
-          <identifier>osx.right_shift_and_right_option_to__previous_tab_in_sublime</identifier>
-          <windowname_not>Windows_VM</windowname_not>
-          <only>SUBLIME2</only>
-          <device_only>DeviceVendor::Internal_Keyboard, DeviceProduct::Internal_Keyboard</device_only>
-          <autogen>__KeyToKey__ 
-            KeyCode::OPTION_R, ModifierFlag::SHIFT_R,
-            KeyCode::CURSOR_LEFT, ModifierFlag::COMMAND_L | ModifierFlag::OPTION_L
-          </autogen>
-        </item>
+        </item> <!-- Safari -->
 
         <item>
-          <appendix>Right Option = Next Tab</appendix>
-          <identifier>osx.sublime_next_tab</identifier>
+          <name>Command Left + 2 = Tab Next (Sublime Text)</name>
+          <identifier>osx.command_left_2_to_tab_next_in_sublime</identifier>
           <windowname_not>Windows_VM</windowname_not>
-          <only>SUBLIME2</only>
-          <device_only>DeviceVendor::Internal_Keyboard, DeviceProduct::Internal_Keyboard</device_only>
+          <only>SUBLIME_TEXT_3</only>
+          <device_only>DeviceVendor::Internal_Keyboard, DeviceProduct::Internal_Keyboard</device_only>          
           <autogen>__KeyToKey__ 
-            KeyCode::OPTION_R,
+            KeyCode::2, ModifierFlag::COMMAND_L,
             KeyCode::CURSOR_RIGHT, ModifierFlag::COMMAND_L | ModifierFlag::OPTION_L
           </autogen>
+        </item> <!-- Sublime Text -->
+
+        <item>
+          <name>Command Left + 2 = Tab Next (Terminal)</name>
+          <identifier>osx.command_left_2_to_tab_next_in_terminal</identifier>
+          <windowname_not>Windows_VM</windowname_not>
+          <only>TERMINAL</only>          
+          <device_only>DeviceVendor::Internal_Keyboard, DeviceProduct::Internal_Keyboard</device_only>     
+          <autogen>__KeyToKey__ 
+            KeyCode::2, ModifierFlag::COMMAND_L,
+            KeyCode::CURSOR_RIGHT, ModifierFlag::COMMAND_L | ModifierFlag::SHIFT_L
+          </autogen>
+        </item> <!-- Terminal -->
+      </item> <!-- Command Right + 2 -->
+
+      <item>
+        <name>Command + L</name>
+        <item>
+          <name>Command + L = Sleep Mac</name>
+          <identifier>osx.command_l_to_sleep_mac</name>
+          <autogen>__KeyToKey__
+            KeyCode::L, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND | ModifierFlag::NONE,
+            ConsumerKeyCode::POWER, ModifierFlag::CONTROL_R | ModifierFlag::SHIFT_R
+          </autogen>
         </item>
-      </item> 
-    </item> 
+      </item> <!-- Command + L -->
+
+      <item>
+        <name>Option + L</name>
+        <item>
+          <name>Option + L = Sleep Mac</name>
+          <identifier>osx.option_l_to_sleep_mac</name>
+          <autogen>__KeyToKey__
+            KeyCode::L, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_OPTION, ModifierFlag::NONE,
+            ConsumerKeyCode::POWER, ModifierFlag::CONTROL_R | ModifierFlag::SHIFT_R
+          </autogen>
+        </item>
+      </item> <!-- Option + L -->
+    </item> <!-- Keyboard Shortcuts -->
 
 
-    <!-- Home/End -->
+    <!--<item>
+      <name>Trackpad</name>
+      <item>
+        <name>Command + Scroll = Command + +</name>
+        <identifier>osx.Command + Scroll = Command + +</identifier>
+        <device_only>DeviceVendor::Internal_Keyboard, DeviceProduct::Internal_Keyboard</device_only>
+        <autogen>__KeyToKey__
+          MOUSEKEY_SCROLL_UP, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND,
+          ConsumerKeyCode::POWER, ModifierFlag::CONTROL_R | ModifierFlag::SHIFT_R
+        </autogen>
+      </item>
+    </item>-->
+  </item> <!-- Internal Keyboard -->
+
+
+  <!-- Shared -->
+  <item>
+    <name>Shared Between Keyboards</name>
+
     <item>
-      <name>Home/End</name>
-      <!-- osx home/end -->
+      <name>Navigation</name>
+      
       <item>
-        <appendix>Music Previous = Command + Left Arrow (OSX Home)</appendix>
-        <identifier>osx.home</identifier>
-        <windowname_not>Windows_VM</windowname_not>
-        <device_only>DeviceVendor::Internal_Keyboard, DeviceProduct::Internal_Keyboard</device_only>
-        <autogen>__KeyToKey__ 
-          ConsumerKeyCode::BRIGHTNESS_UP,
-          KeyCode::CURSOR_LEFT, ModifierFlag::COMMAND_L
-        </autogen>
-      </item>
-
-      <item>
-        <appendix>Music Next = Command + Right Arrow (OSX End)</appendix>
-        <identifier>osx.end</identifier>
-        <windowname_not>Windows_VM</windowname_not>
-        <device_only>DeviceVendor::Internal_Keyboard, DeviceProduct::Internal_Keyboard</device_only>
-        <autogen>__KeyToKey__ 
-          KeyCode::MISSION_CONTROL,
-          KeyCode::CURSOR_RIGHT, ModifierFlag::COMMAND_L
-        </autogen>
-      </item>
-
-      <!-- windows vm home/end -->
-      <item>
-        <appendix>Music Previous = Home (Windows VM)</appendix>
-        <identifier>windows_vm.home</identifier>
-        <windowname_only>Windows_VM</windowname_only>
-        <device_only>DeviceVendor::Internal_Keyboard, DeviceProduct::Internal_Keyboard</device_only>
+        <name>Control + H = Backward Word</name>
+        <identifier>sk.Command + H = Backward Word</identifier>
         <autogen>__KeyToKey__
-          ConsumerKeyCode::BRIGHTNESS_UP,
-          KeyCode::HOME
+          KeyCode::H, ModifierFlag::CONTROL_R | ModifierFlag::NONE,
+          KeyCode::CURSOR_LEFT, ModifierFlag::OPTION_R
         </autogen>
       </item>
 
       <item>
-        <appendix>Music Next = End (Windows VM)</appendix>
-        <identifier>windows_vm.end</identifier>
-        <windowname_only>Windows_VM</windowname_only>
-        <device_only>DeviceVendor::Internal_Keyboard, DeviceProduct::Internal_Keyboard</device_only>
-        <autogen>__KeyToKey__ 
-          KeyCode::MISSION_CONTROL,
-          KeyCode::END
+        <name>Control + G = Forward Word</name>
+        <identifier>sk.Command + G = Forward Word</identifier>
+        <autogen>__KeyToKey__
+          KeyCode::G, ModifierFlag::CONTROL_R | ModifierFlag::NONE,
+          KeyCode::CURSOR_RIGHT, ModifierFlag::OPTION_R
         </autogen>
       </item>
-    </item> 
+    </item>
 
-
-    <!-- Refresh -->
     <item>
-      <name>Refresh/F5</name>
+      <name>Text Editing</name>
+
       <item>
-        <appendix>Mission Control = Command + R (OSX)</appendix>
-        <identifier>osx.refresh</identifier>
-        <windowname_not>Windows_VM</windowname_not>
-        <device_only>DeviceVendor::Internal_Keyboard, DeviceProduct::Internal_Keyboard</device_only>        
+        <name>Control + \ = Option + Foward Delete</name>
+        <identifier>sk.Command + \ = Option + Forward Delete</identifier>
         <autogen>__KeyToKey__
-          ConsumerKeyCode::BRIGHTNESS_DOWN, ModifierFlag::NONE,
-          KeyCode::R, ModifierFlag::COMMAND_L
+          KeyCode::BACKSLASH, ModifierFlag::CONTROL_R | ModifierFlag::NONE,
+          KeyCode::FORWARD_DELETE, ModifierFlag::OPTION_R,
+        </autogen>
+      </item>
+      
+      <item>
+        <name>Control + Delete = Option + Delete</name>
+        <identifier>sk.Command + Delete = Option + Delete</identifier>
+        <autogen>__KeyToKey__
+          KeyCode::DELETE, ModifierFlag::CONTROL_R | ModifierFlag::NONE,
+          KeyCode::DELETE, ModifierFlag::OPTION_R,
         </autogen>
       </item>
 
       <item>
-        <appendix>Mission Control = F5 (Windows VM)</appendix>
-        <identifier>windows_vm.F5</identifier>
-        <windowname_only>Windows_VM</windowname_only>
-        <device_only>DeviceVendor::Internal_Keyboard, DeviceProduct::Internal_Keyboard</device_only>        
+        <name>Control + J = Delete Word</name>
+        <identifier>sk.Command + J = Delete Word</identifier>
         <autogen>__KeyToKey__
-          ConsumerKeyCode::BRIGHTNESS_DOWN,
-          KeyCode::F5
+          KeyCode::J, ModifierFlag::CONTROL_R | ModifierFlag::NONE,
+          KeyCode::CURSOR_LEFT, ModifierFlag::OPTION_R,
+          KeyCode::CURSOR_RIGHT, ModifierFlag::OPTION_R | ModifierFlag::SHIFT_R,
+          KeyCode::FORWARD_DELETE,
+          Option::NOREPEAT
         </autogen>
       </item>
-    </item> 
-  </item> 
+
+      <item>
+        <name>Control + K = Delete Line</name>
+        <identifier>sk.Command + K = Delete Line</identifier>
+        <autogen>__KeyToKey__
+          KeyCode::K, ModifierFlag::CONTROL_R | ModifierFlag::NONE,
+          KeyCode::CURSOR_LEFT, ModifierFlag::COMMAND_R,
+          KeyCode::CURSOR_RIGHT, ModifierFlag::COMMAND_R | ModifierFlag::SHIFT_R,
+          KeyCode::FORWARD_DELETE,
+          Option::NOREPEAT
+        </autogen>
+      </item>
+    </item>
+  </item> <!-- Shared betwen keyboards -->
 
 
-  <!-- External Mouse -->
+
+
   <item>
     <name>External Mouse</name>
+    <item>
+      <name>Middle Click</name>
+      <item>
+        <name>Middle Click = Page Back</name>
+        <identifier>external_mouse.middle_click_to_page_back</identifier>
+        <windowname_not>World_of_Warcraft</windowname_not>
+        <autogen>__KeyToKey__ PointingButton::MIDDLE, KeyCode::BRACKET_LEFT, ModifierFlag::COMMAND_L</autogen>
+      </item>
+    </item> <!-- Middle Click -->
 
     <item>
-      <identifier>osx.mouse_scroll</identifier>
-      <appendix>Force Mouse Scrolling to be Natural (Trackpad Is Still Inverted)</appendix>      
-      <device_only>
-        DeviceVendor::Roccat_Lua, DeviceProduct::Roccat_Lua,
-        DeviceVendor::XCELLON, DeviceProduct::XCELLON
-      </device_only>
-      <autogen>__FlipScrollWheel__ Option::FLIPSCROLLWHEEL_VERTICAL</autogen>
-    </item>
+      <name>Sequential Left + Right Click</name>
+      <item>
+        <name>Sequential Left + Right Click = Page Back</name>
+        <identifier>external_mouse.Sequential Left + Right Click = Page Back</identifier>
+        <autogen>__KeyToKey__ PointingButton::LEFT, PointingButton::LEFT, ModifierFlag::EXTRA1</autogen>
+        <autogen>__KeyToKey__ PointingButton::RIGHT, ModifierFlag::EXTRA1, KeyCode::BRACKET_LEFT, ModifierFlag::COMMAND_L</autogen>
+      </item>
+    </item> <!-- Sequential Left + Right Click -->
 
     <item>
-      <appendix>Middle Click = Page Back</appendix>
-      <identifier>osx.middle_click</identifier>
-      <windowname_not>World_of_Warcraft</windowname_not>
-      <autogen>__KeyToKey__ 
-        PointingButton::MIDDLE, 
-        KeyCode::BRACKET_LEFT, ModifierFlag::COMMAND_L
-      </autogen>
-    </item>
+      <name>Simultaneous Left + Right Click</name>
+      <item>
+        <name>Simultaneous Left + Right Click = Command + W</name>
+        <identifier>external_mouse.Simultaneous Left + Right Click = Command + W</identifier>
+        <windowname_not>World_of_Warcraft</windowname_not>
+        <autogen>__SimultaneousKeyPresses__
+          @begin PointingButton::LEFT, PointingButton::RIGHT,
+          @end KeyCode::W, ModifierFlag::COMMAND_L
+        </autogen>
+      </item>
+    </item> <!-- Simultaneous Left + Right Click -->
 
     <item>
-      <identifier>osx.simultaneous_left_and_right_click</identifier>
-      <appendix>Simultaneous L + R Click = Cmd + W</appendix>
-      <windowname_not>World_of_Warcraft</windowname_not>
-      <autogen>__SimultaneousKeyPresses__
-        @begin PointingButton::LEFT, PointingButton::RIGHT,
-        @end KeyCode::W, ModifierFlag::COMMAND_L
-      </autogen>
+      <name>Scrolling</name>
+      <item>
+        <name>Scrolling = Reversed (Trackpad Is Still Natural)</name>
+        <identifier>external_mouse.Scrolling = Reversed (Trackpad Is Still Natural)</identifier>
+        <device_only>DeviceVendor::Roccat_Lua, DeviceProduct::Roccat_Lua</device_only> 
+        <autogen>__FlipScrollWheel__ Option::FLIPSCROLLWHEEL_VERTICAL</autogen>
+      </item>
     </item>
-
-    <!--item>
-      <appendix>Left then Right Click = Page Back</appendix>
-      <identifier>osx.left_then_right_click</identifier>
-      <autogen>__KeyToKey__
-        PointingButton::LEFT,
-        PointingButton::LEFT, ModifierFlag::EXTRA1,
-      </autogen>
-      <autogen>__KeyToKey__
-        PointingButton::RIGHT, ModifierFlag::EXTRA1,
-        KeyCode::BRACKET_LEFT, ModifierFlag::COMMAND_L,
-      </autogen>
-    </item-->
-  </item> 
+  </item> <!-- External Mouse -->
 
 
-
-  <!-- World of Warcraft -->
   <item>
-    <name>World_of_Warcraft</name>
+    <name>World of Warcraft</name>
     <item>
-      <identifier>wow.trackpad</identifier>
-      <appendix>Reverse Trackpad Scrolling Direction</appendix>
+      <name>Reverse Trackpad Scrolling Direction</name>
+      <identifier>trackpad.Reverse Trackpad Scrolling Direction</identifier>
       <windowname_only>World_of_Warcraft</windowname_only>
       <autogen>__FlipScrollWheel__ Option::FLIPSCROLLWHEEL_VERTICAL</autogen>
     </item>
-  </item>
+  </item> <!-- World of Warcraft -->  
 </root>
-
-
-
-
-
-
 
