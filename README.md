@@ -14,7 +14,6 @@ defaults delete -g NSToolbarFullScreenAnimationDuration
 
 ## Make a symbolic link to use "subl" command via Terminal
 https://www.sublimetext.com/docs/2/osx_command_line.html
-sudo ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
 
 ## Vivaldi custom css directory
 /Applications/Vivaldi.app/Contents/Versions/$version$/Vivaldi Framework.framework/Resources/vivaldi/
