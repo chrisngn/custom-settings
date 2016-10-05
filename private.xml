@@ -942,7 +942,7 @@
 								@end
 
 								@begin
-								KeyCode::RETURN, ModifierFlag::CONTROL_R
+								KeyCode::SPACE, ModifierFlag::CONTROL_R | ModifierFlag::OPTION_R
 								@end
 							</autogen>
 						</block>
