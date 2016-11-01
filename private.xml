@@ -624,6 +624,60 @@
 						KeyCode::CAPSLOCK
 					</autogen>
 				</item>
+
+				<item>
+					<name>CAPSLOCK = CONTROL_R</name>
+					<appendix>CAPSLOCK when double tapped</appendix>
+					<identifier>private.Double tap CAPSLOCK = CAPSLOCK</identifier>
+
+					<block>
+						<!-- double tap -->
+						<lastpressedphysicalkey_only>KeyCode::CONTROL_R</lastpressedphysicalkey_only>
+						<!-- threshold is 500 ms -->
+						<elapsedtimesincelastpressed_lessthan>Millisecond::RawValue::300</elapsedtimesincelastpressed_lessthan>
+
+						<!-- Turn on CAPSLOCK with double shift presses-->
+						<block>
+							<autogen>
+								__KeyOverlaidModifier__
+								KeyCode::CONTROL_R,
+								@begin
+								KeyCode::CONTROL_R,
+								@end
+
+								@begin
+								KeyCode::CAPSLOCK,
+								@end
+							</autogen>
+						</block>
+
+						<!-- other double -->
+						<block>
+							<autogen>
+								__KeyToKey__
+								KeyCode::CONTROL_R,
+								KeyCode::CONTROL_R,
+							</autogen>
+						</block>
+					</block>
+
+					<!-- Turn off CAPSLOCK with single left shift -->
+					<block>
+						<modifier_only>ModifierFlag::CAPSLOCK</modifier_only>
+						<autogen>
+							__KeyOverlaidModifier__
+							KeyCode::CONTROL_R,
+
+							@begin
+							KeyCode::CONTROL_R,
+							@end
+
+							@begin
+							KeyCode::CAPSLOCK,
+							@end
+						</autogen>
+					</block>
+				</item> <!-- Double tap SHIFT_L -->
 			</item> <!-- CAPSLOCK -->
 
 			<item>

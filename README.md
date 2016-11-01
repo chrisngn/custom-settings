@@ -12,8 +12,11 @@ defaults write -g NSToolbarFullScreenAnimationDuration -float 0;killall Dock
 ## Undo the change above
 defaults delete -g NSToolbarFullScreenAnimationDuration
 
-# Adding blank space to dock
+## Adding blank space to dock
 defaults write com.apple.dock persistent-apps -array-add '{"tile-type"="spacer-tile";}';killall Dock
+
+## Show the path in finder
+defaults write com.apple.finder _FXShowPosixPathInTitle -bool true; killall Finder
 
 ## Resetting Terminal preferences
 http://superuser.com/questions/427154/reset-mac-os-x-terminal-to-default
